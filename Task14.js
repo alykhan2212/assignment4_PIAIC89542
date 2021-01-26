@@ -1,0 +1,10 @@
+var date = new Date();
+document.write("Current Date: ",date);document.write("<br>");
+var weekday = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+var hours = date.getHours()-1;
+var timezone = date.toString();
+var gmt = timezone.indexOf("GMT");
+var findTimezone = timezone.slice(gmt);
+document.write("<br>");
+document.write("1 hour ago, it was "+weekday[date.getDay()]+" "+months[date.getMonth()]+" "+date.getDate()+" "+date.getFullYear()+" "+hours+":"+date.getMinutes()+":"+date.getSeconds()+" "+findTimezone);
